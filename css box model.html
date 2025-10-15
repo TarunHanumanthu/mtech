@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Box Model Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .box {
+      background: #e3f2fd;       /* Content background */
+      width: 250px;
+      height: 120px;
+
+      padding: 20px;             /* Padding inside the box */
+      border: 5px solid #2196f3; /* Border around content+padding */
+      margin: 40px;              /* Space outside the border */
+
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .label {
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #0d47a1;
+    }
+
+    .info {
+      font-size: 14px;
+      color: #333;
+    }
+
+    /* For visualization, show background of margin and padding */
+    .wrapper {
+      background: rgba(255, 193, 7, 0.2); /* shows margin area */
+      padding: 10px;
+    }
+
+    .padding-visual {
+      background: rgba(76, 175, 80, 0.2); /* shows padding area */
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="box">
+      <div class="padding-visual">
+        <div class="label">CSS Box Model</div>
+        <div class="info">
+          Content → Padding → Border → Margin
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Grid Dashboard Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+      grid-template-rows: 70px 1fr 50px;
+      grid-template-columns: 220px 1fr;
+      height: 100vh;
+    }
+
+    /* Header */
+    .header {
+      grid-area: header;
+      background: linear-gradient(90deg, #4a90e2, #0072ff);
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      grid-area: sidebar;
+      background: #f4f6f9;
+      padding: 20px;
+      border-right: 1px solid #ddd;
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      margin: 5px 0;
+      color: #333;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+      background: #e3f2fd;
+      color: #0072ff;
+    }
+
+    /* Main Content */
+    .main {
+      grid-area: main;
+      padding: 20px;
+      background: #fff;
+    }
+
+    .main h2 {
+      margin-top: 0;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Footer */
+    .footer {
+      grid-area: footer;
+      background: #333;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="header">📊 Dashboard</div>
+    
+    <div class="sidebar">
+      <h3>Navigation</h3>
+      <a href="#">🏠 Home</a>
+      <a href="#">📈 Analytics</a>
+      <a href="#">📝 Reports</a>
+      <a href="#">⚙️ Settings</a>
+    </div>
+    
+    <div class="main">
+      <h2>Welcome, User!</h2>
+      <p>This is the main dashboard area. You can add graphs, charts, or other content here.</p>
+      <div class="cards">
+        <div class="card">💡 Insights</div>
+        <div class="card">📊 Sales Data</div>
+        <div class="card">👥 Users</div>
+        <div class="card">📅 Calendar</div>
+      </div>
+    </div>
+    
+    <div class="footer">© 2025 My Dashboard | All rights reserved</div>
+  </div>
+</body>
+</html>

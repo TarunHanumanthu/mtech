@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Layout with Navbar & Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(90deg, #4a90e2, #0072ff);
+      padding: 15px 40px;
+      color: white;
+    }
+
+    .navbar h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ffeb3b;
+    }
+
+    /* Gallery Layout */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .card {
+      flex: 1 1 250px; /* responsive width */
+      max-width: 300px;
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 10px;
+      color: #333;
+    }
+
+    .card p {
+      margin: 0 10px 15px;
+      color: #555;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <h1>My Website</h1>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Gallery</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
+  <!-- Gallery Section -->
+  <div class="gallery">
+    <div class="card">
+      <img src="https://picsum.photos/300/180?random=1" alt="Gallery 1">
+      <h3>Beautiful Landscape</h3>
+      <p>Amazing view of mountains and valleys.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/300/180?random=2" alt="Gallery 2">
+      <h3>Sunny Beach</h3>
+      <p>Relaxing vibes with sea and sand.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/300/180?random=3" alt="Gallery 3">
+      <h3>City Lights</h3>
+      <p>Modern architecture and night lights.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/300/180?random=4" alt="Gallery 4">
+      <h3>Forest Trail</h3>
+      <p>Peaceful greenery and walking paths.</p>
+    </div>
+  </div>
+</body>
+</html>

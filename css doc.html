@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Selectors Demo</title>
+  <style>
+    /* Universal Selector: applies to everything */
+    * {
+      font-family: Arial, sans-serif;
+      margin: 5px;
+      padding: 5px;
+    }
+
+    /* Element Selector: all paragraphs will be blue */
+    p {
+      color: blue;
+    }
+
+    /* Class Selector: use .highlight */
+    .highlight {
+      background-color: yellow;
+      font-weight: bold;
+    }
+
+    /* ID Selector: use #special */
+    #special {
+      color: red;
+      font-size: 20px;
+      text-decoration: underline;
+    }
+
+    /* Attribute Selector: style inputs with type="text" */
+    input[type="text"] {
+      border: 2px solid green;
+      padding: 5px;
+    }
+
+    /* Attribute Selector (any element with title attr) */
+    [title] {
+      color: purple;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>create a web page that demonstrate to use different css selection elements,class,id,universal,attribute</h1>
+
+  <p>This is a <span class="highlight">paragraph</span> using the <b>element</b> selector.</p>
+
+  <p id="special">This paragraph is styled using an <b>ID selector</b>.</p>
+
+  <p class="highlight">This paragraph is styled using a <b>class selector</b>.</p>
+
+  <p title="demo">This text has a <b>title attribute</b>, so it is styled using an <b>attribute selector</b>.</p>
+
+  <form>
+    <label for="name">Enter Name:</label>
+    <input type="text" id="name" placeholder="Styled by attribute selector">
+    <br><br>
+    <label for="password">Enter Password:</label>
+    <input type="password" id="password" placeholder="Not styled">
+  </form>
+
+</body>
+</html>
